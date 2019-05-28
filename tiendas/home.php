@@ -16,8 +16,6 @@ $products = getProducts($conn);
 	<h1>Bienvenido <?php echo $_SESSION['user']['username']; ?></h1>
 	<h2>Tienda: <?php echo $_SESSION['user']['store']; ?></h2>
 
-	<a href="new_product.php">Añadir producto</a>
-
 	<table>
 		<thead>
 			<tr>
@@ -41,5 +39,16 @@ $products = getProducts($conn);
 			<?php } ?>
 		</tbody>
 	</table>
+
+	<br><a href="new_product.php">Añadir producto</a><br><br>
+	
+	<h2>OTRAS TIENDAS</h2>
+	<h2>ID: <?php echo $_SESSION['user']['id']; ?></h2>
+	<br>
+	
+	<?php getUser($conn); ?>
+
+
+
 </body>
 </html>
